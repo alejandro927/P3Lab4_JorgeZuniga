@@ -148,6 +148,7 @@ void Inventario::estadisticasGen() {
 
 
 	//cantidad por categoria
+	cout<< "Cantidad total por Categoria = "<<endl;
 	for(int j = 0; j < categorias.size(); j++) {
 		contador3=0;
 		for(int i = 0; i < productos.size(); i++) {
@@ -155,11 +156,12 @@ void Inventario::estadisticasGen() {
 				contador3 += productos.at(i)->getcantidad();
 			}
 		}
-		cout<< "Cantidad total por Categoria = " << categorias.at(j) << " = " << contador3<< endl;
+		cout<< categorias.at(j) << " = " << contador3<< endl;
 	}
 	//presio por categoria
 	cout<<endl;
 	int val=0;
+	cout<<"Presio total por Categoria= "<<endl;
 	for(int j = 0; j < categorias.size(); j++) {
 		contador4=0;
 		val=0;
@@ -170,7 +172,7 @@ void Inventario::estadisticasGen() {
 				contador4 += val;
 			}
 		}
-		cout<<"Cantidad total por Categoria= "<<categorias.at(j) << " = " << contador4<<endl;
+		cout<<categorias.at(j) << " = " << contador4<<endl;
 	}
 	
 
