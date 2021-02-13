@@ -127,7 +127,7 @@ void Inventario::estadisticasGen() {
 	}
 
 
-	/*int contador1=0,contador2=0,contador3=0;
+	int contador1=0,contador2=0,contador3=0,contador4=0;
 	for(int i = 0; i < productos.size(); i++) {
 		contador1 += productos.at(i)->getcantidad();
 	}
@@ -141,8 +141,10 @@ void Inventario::estadisticasGen() {
 		contador2 += valorx;
 	}
 	cout<<"El precio total del inventario es:"<<contador2;
-	couy<<endl;
-	int val=0;
+
+	cout<<endl;
+	/*//cantidad por categoria
+	
 	for(int j = 0; j < categorias.size(); j++) {
 		contador3=0;
 		for(int i = 0; i < productos.size(); i++) {
@@ -150,9 +152,23 @@ void Inventario::estadisticasGen() {
 				contador3 += productos.at(i)->getcantidad();
 			}
 		}
-		cout<<"Categoria= "<<categoria[i] " = " << contador3;
-	}*/
-
+		cout<< "Cantidad total por Categoria = " << categorias[j] " = " << contador3<<endl;
+	}
+	//presio por categoria
+	int val=0;
+	for(int j = 0; j < categorias.size(); j++) {
+		contador4=0;
+		val=0;
+		for(int i = 0; i < productos.size(); i++) {
+			if(categorias[i] == productos.at(i)->getcategoria()) {
+				val=0;
+				val = productos.at(i)->getcantidad() * productos.at(i)->getprecio();
+				contador4 += val;
+			}
+		}
+		cout<<"Cantidad total por Categoria= "<<categorias[j] " = " << contador4<<endl;
+	}
+*/
 
 
 }
