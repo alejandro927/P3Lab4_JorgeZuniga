@@ -151,7 +151,7 @@ void Inventario::estadisticasGen() {
 	for(int j = 0; j < categorias.size(); j++) {
 		contador3=0;
 		for(int i = 0; i < productos.size(); i++) {
-			if(categorias.at(i) == productos.at(i)->getcategoria()) {
+			if(categorias.at(j) == productos.at(i)->getcategoria()) {
 				contador3 += productos.at(i)->getcantidad();
 			}
 		}
@@ -164,7 +164,7 @@ void Inventario::estadisticasGen() {
 		contador4=0;
 		val=0;
 		for(int i = 0; i < productos.size(); i++) {
-			if(categorias.at(i) == productos.at(i)->getcategoria()) {
+			if(categorias.at(j) == productos.at(i)->getcategoria()) {
 				val=0;
 				val = productos.at(i)->getcantidad() * productos.at(i)->getprecio();
 				contador4 += val;
