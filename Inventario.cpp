@@ -174,7 +174,4 @@ void Inventario::estadisticasGen() {
 		}
 		cout<<categorias.at(j) << " = " << contador4<<endl;
 	}
-	
-
-
 }
