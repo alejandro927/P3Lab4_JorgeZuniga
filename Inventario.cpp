@@ -125,14 +125,18 @@ void Inventario::estadisticasGen() {
 		cout << "Cantidad: " << c->getcantidad() << endl;
 		cout << "Categoria: " << c->getcategoria() << endl;
 	}
-
+	cout<<endl;
+	/*for(int i = 0; i < categorias.size(); i++) {
+		cout <<"------" << "Categoria #" << i <<"------"<<endl;
+		cout << "Nombre: "<< categorias.at(i) << endl;
+	}*/
 
 	int contador1=0,contador2=0,contador3=0,contador4=0;
 	for(int i = 0; i < productos.size(); i++) {
 		contador1 += productos.at(i)->getcantidad();
 	}
-	cout <<"Cantidad total de productos: "<<contador1;
-	cout<<"La cantidad de productos unicos son:"<<productos.size();
+	cout <<"Cantidad total de productos: "<<contador1<<endl;
+	cout<<"La cantidad de productos unicos son:"<<productos.size()<<endl;
 
 	int valorx=0;
 	for(int i = 0; i < productos.size(); i++) {
@@ -140,35 +144,35 @@ void Inventario::estadisticasGen() {
 		valorx = productos.at(i)->getcantidad() * productos.at(i)->getprecio();
 		contador2 += valorx;
 	}
-	cout<<"El precio total del inventario es:"<<contador2;
+	cout<<"El precio total del inventario es:"<<contador2<<endl;
 
-	cout<<endl;
-	/*//cantidad por categoria
-	
+
+	//cantidad por categoria
 	for(int j = 0; j < categorias.size(); j++) {
 		contador3=0;
 		for(int i = 0; i < productos.size(); i++) {
-			if(categorias[i] == productos.at(i)->getcategoria()) {
+			if(categorias.at(i) == productos.at(i)->getcategoria()) {
 				contador3 += productos.at(i)->getcantidad();
 			}
 		}
-		cout<< "Cantidad total por Categoria = " << categorias[j] " = " << contador3<<endl;
+		cout<< "Cantidad total por Categoria = " << categorias.at(j) << " = " << contador3<< endl;
 	}
 	//presio por categoria
+	cout<<endl;
 	int val=0;
 	for(int j = 0; j < categorias.size(); j++) {
 		contador4=0;
 		val=0;
 		for(int i = 0; i < productos.size(); i++) {
-			if(categorias[i] == productos.at(i)->getcategoria()) {
+			if(categorias.at(i) == productos.at(i)->getcategoria()) {
 				val=0;
 				val = productos.at(i)->getcantidad() * productos.at(i)->getprecio();
 				contador4 += val;
 			}
 		}
-		cout<<"Cantidad total por Categoria= "<<categorias[j] " = " << contador4<<endl;
+		cout<<"Cantidad total por Categoria= "<<categorias.at(j) << " = " << contador4<<endl;
 	}
-*/
+	
 
 
 }

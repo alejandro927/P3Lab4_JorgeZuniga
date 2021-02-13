@@ -1,0 +1,16 @@
+1
+1
+1
+arroz
+15
+20
+abarroteria
+1
+2
+coca
+15
+200
+jugos
+4
+2
+4
